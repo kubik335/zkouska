@@ -38,26 +38,36 @@ before_install:
   #- ls -a
 
 ### Pokus 2 ###
-  - sudo apt-get install chromium-chromedriver
+  #- sudo apt-get install chromium-chromedriver
   - cd /
   - ls -la
+  - cd local/bin/
+  - ls -la
+  - cd /
+  - cd bin/
+  - ls -la
+  - cd /
 
 ### Pokus 3 ###
-  #- sudo apt-get install libxss1 libappindicator1 libindicator7
-  #- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo apt-get install libxss1 libappindicator1 libindicator7
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-  #- sudo dpkg -i google-chrome*.deb
-  #- sudo apt-get install -f
+  - sudo dpkg -i google-chrome*.deb
+  - sudo apt-get install -f
 
-  #- sudo apt-get install xvfb
+  - sudo apt-get install xvfb
 
-  #- sudo apt-get install unzip
+  - sudo apt-get install unzip
 
-  #- wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
-  #- unzip chromedriver_linux64.zip
-  #- chmod +x chromedriver
+  - wget -N http://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - chmod +x chromedriver
 
-  #- sudo mv -f chromedriver /usr/local/share/chromedriver
+  - pwd
+  - ls -la
+
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 
 before_script:
