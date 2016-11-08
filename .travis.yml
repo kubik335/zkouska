@@ -38,15 +38,14 @@ before_install:
 
 ### Pokus 2 ###
   #- sudo apt-get install chromium-chromedriver
-  - cd /
+
+  - cd $HOME
   - ls -la
-  - cd home/travis
-  - ls -la
-  - cd .local/
-  - ls -la
-  - cd home/travis
-  - cd bash_profile/
-  - ls -la
+  #- cd .local/
+  #- ls -la
+  #- cd home/travis
+  #- cd .bash_profile/
+  #- ls -la
 
 ### Pokus 3 ###
   #- export CHROME_BIN=/usr/bin/google-chrome
@@ -67,15 +66,19 @@ before_install:
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
 
-  - pwd
+  - sudo mv -f chromedriver .local/share/chromedriver
   - ls -la
-
-  #- sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s .local/share/chromedriver .local/bin/chromedriver
+  - ls -la
   #- sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
+  - mkdir -p $HOME/bin
+  - mv chromedriver $HOME/bin
+  - echo "export PATH=$PATH:$HOME/bin" >> $HOME/.bash_profile
 
 before_script:
-  - cd home/travis/build/kubik335/zkouska
+  - cd $HOME
+  - cd build/kubik335/zkouska
 
 script: pybot tests/newTest.robot
 
