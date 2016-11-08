@@ -72,7 +72,7 @@ before_script:
 
   ### Add chromediver to Path ###
   - echo $PATH
-  - PATH=$PATH:/home/travis/build/kubik335/zkouska/chromedriver
+  - PATH=$PATH:/home/travis/build/kubik335/zkouska/chromedriver.exe
   - echo $PATH
 
 script:
