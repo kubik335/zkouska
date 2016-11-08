@@ -42,7 +42,7 @@ before_install:
   - ls -la
   - cd home/travis
   - ls -la
-  - cd local/
+  - cd .local/
   - ls -la
   - cd home/travis
   - cd bash_profile/
