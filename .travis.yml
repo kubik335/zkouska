@@ -39,11 +39,7 @@ before_install:
 
 ### Pokus 2 ###
   - sudo apt-get install chromium-chromedriver
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
+  - cd /
   - ls -la
 
 ### Pokus 3 ###
