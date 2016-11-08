@@ -24,16 +24,24 @@ install:
   - pip install -U robotframework-requests
 
 before_install:
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sudo apt-get update
-  - sudo apt-get install -y libappindicator1 fonts-liberation
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome-stable_current_amd64.deb
-  - ls -a
+
+### Pokus 1 ###
+  #- export CHROME_BIN=/usr/bin/google-chrome
+  #- export DISPLAY=:99.0
+  #- sh -e /etc/init.d/xvfb start
+  #- sudo apt-get update
+  #- sudo apt-get install -y libappindicator1 fonts-liberation
+  #- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  #- sudo dpkg -i google-chrome-stable_current_amd64.deb
+  #- ls -a
+  #- sudo apt-get install chromium-chromedriver
+  #- ls -a
+
+### Pokus 2 ###
   - sudo apt-get install chromium-chromedriver
+  - cd .
   - ls -a
+
 
 before_script:
 
