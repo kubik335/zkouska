@@ -27,4 +27,4 @@ script:
 
 env:
   matrix:
-  - BROWSER=ff
+  - BROWSER=chrome
