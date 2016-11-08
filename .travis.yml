@@ -67,9 +67,9 @@ before_install:
   - chmod +x chromedriver
 
   - sudo mv -f chromedriver .local/share/chromedriver
-  - ls -la
-  - sudo ln -s .local/share/chromedriver .local/bin/chromedriver
-  - ls -la
+  #- ls -la
+  #- sudo ln -s .local/share/chromedriver .local/bin/chromedriver
+  #- ls -la
   #- sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
   - mkdir -p $HOME/bin
