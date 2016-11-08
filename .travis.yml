@@ -16,15 +16,12 @@ install:
   - pip install -U requests
   - pip install -U robotframework-requests
 
+
 before_script:
-
-
+  - sudo apt-get install google-chrome-stable
 
 script:
-  - pybot -v BROWSER:$BROWSER -v "VALID USER":$TL_USER -v "VALID PASSWD":$TL_PASSWD tests/newTest.robot
+  - pybot tests/newTest.robot
   #- pybot -v BROWSER:$BROWSER -v "VALID USER":$TL_USER -v "VALID PASSWD":$TL_PASSWD --suitestatlevel 2 tests
 
 
-env:
-  matrix:
-  - BROWSER=chrome
