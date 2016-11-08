@@ -83,6 +83,9 @@ before_script:
   ### Add chromediver to Path ###
   - echo $PATH
   - PATH=$PATH:/home/travis/build/kubik335/zkouska/chromedriver
+  - PATH=$PATH:chromedriver
+  - PATH=$PATH:google-chrome-stable_current_amd64.deb
+  - PATH=$PATH:/home/travis/build/kubik335/zkouska/google-chrome-stable_current_amd64.deb
   - echo $PATH
 
 script:
