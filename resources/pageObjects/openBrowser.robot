@@ -11,15 +11,26 @@ Library        Selenium2Library
 
 *** Keywords ***
 
-Login as Admin
-    input text  login  renat.kulalov
-    input text  tl_password  renat123
+Sign in
+    wait until page contains element  //a[@class="login"]
+    click element  //a[@class="login"]
+    wait until page contains element  username
+    wait until page contains element  password
+    input text  username  ${username}
+    input text  password  ${password}
 
 Open Browser To Login Page
     Open Browser  ${LOGIN URL}  ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed  ${DELAY}
-    Title Should Be  TestLink
+    Title Should Be  Redmine demo
 
 Submit Credentials
-    Click Button  login_submit
+    wait until page contains element  login
+    Click Button  login
+
+Check user was logged in
+    wait until page contains  Logged in as ${username}
+    wait until page contains element  //a[@class="user active"][contains(text(),"${username}")]
+    page should contain  Logged in as ${username}
+    page should contain element  //a[@class="user active"][contains(text(),"${username}")]
