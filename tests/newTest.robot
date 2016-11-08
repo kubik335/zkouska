@@ -9,7 +9,7 @@ Test Teardown  close browser
 *** Variables ***
 ${LOGIN URL}        http://demo.redmine.org/
 ${DELAY}            0
-${BROWSER}          ff
+${BROWSER}          chrome
 ${username}         alexandra.kolpakova
 ${password}         alexandra123
 
