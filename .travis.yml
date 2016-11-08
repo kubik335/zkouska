@@ -24,13 +24,8 @@ install:
   - pip install -U robotframework-requests
 
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg –I google-chrome-stable_current_amd64.deb
 
-before_install:
-  - npm ./install js
-  - npm install chromedriver
-  - npm install chromedriver --chromedriver_cdnurl=http://npm.taobao.org/mirrors/chromedriver
-
-script: ./node_modules/.bin/karma start --single-run --browsers Firefox
+script: pybot tests/newTest.robot
 
