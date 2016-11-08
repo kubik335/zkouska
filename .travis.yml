@@ -42,6 +42,8 @@ before_install:
   - ls -la
   - cd home/travis
   - ls -la
+  - cd local/
+  - ls -la
 
 ### Pokus 3 ###
   #- export CHROME_BIN=/usr/bin/google-chrome
