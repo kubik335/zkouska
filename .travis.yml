@@ -41,11 +41,8 @@ before_install:
   #- sudo apt-get install chromium-chromedriver
   - cd /
   - ls -la
-  - cd home/
+  - cd home/travis
   - ls -la
-
-
-
 
 ### Pokus 3 ###
   - export CHROME_BIN=/usr/bin/google-chrome
