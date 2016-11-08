@@ -29,6 +29,7 @@ before_script:
   #- sudo dpkg -i google-chrome-stable
 
   ### Add chromediver to Path ###
+  - pwd
   - echo $PATH
   - PATH=$PATH:chromedriver.exe
 
