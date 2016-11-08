@@ -62,7 +62,7 @@ before_script:
 
   - wget http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip
   - pwd
-  - unzip chromedriver_linux64.zip -d /home/travis/kubik335/zkouska/driver/
+  - unzip chromedriver_linux64.zip -d /driver/
   - export CHROME_BIN=chromium-browser
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
