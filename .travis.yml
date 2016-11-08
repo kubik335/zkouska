@@ -42,8 +42,9 @@ before_install:
   - cd /
   - ls -la
   - cd home/
-  - cd local/bin/
   - ls -la
+
+
 
 
 ### Pokus 3 ###
