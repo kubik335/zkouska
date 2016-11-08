@@ -41,7 +41,7 @@ before_install:
   - sudo apt-get install chromium-chromedriver
   - cd ..
   - cd ..
-  - ls -a
+  - ls -l
 
 ### Pokus 3 ###
   #- sudo apt-get install libxss1 libappindicator1 libindicator7
