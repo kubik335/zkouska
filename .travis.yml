@@ -11,8 +11,7 @@ python:
   - "2.7"
 
 node_js:
-    - "0.10"
-    - "4.2"
+    - "0.8"
 
 install:
   - pip install robotframework
@@ -31,8 +30,6 @@ before_install:
  - sudo apt-get install -y libappindicator1 fonts-liberation
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
- - pwd
- - ls -a
 
 before_script:
 
@@ -83,9 +80,9 @@ before_script:
   #- ls -a
 
   ### Add chromediver to Path ###
-  #- echo $PATH
-  #- PATH=$PATH:/home/travis/build/kubik335/zkouska/chromedriver.exe
-  #- echo $PATH
+  - echo $PATH
+  - PATH=$PATH:/home/travis/build/kubik335/zkouska/chromedriver.exe
+  - echo $PATH
 
 script:
   - pybot tests/newTest.robot
