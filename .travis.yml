@@ -32,7 +32,7 @@ before_install:
  - sudo dpkg -i google-chrome*.deb
 
 before_script:
-  #- npm install
+  - npm install
   #- sudo apt-get install chromium-browser
   #- sudo apt-get install libnspr4-0d
   #- sudo apt-get install libcurl3
