@@ -1,5 +1,4 @@
 language:
- - node_js
  - python
 
 
@@ -12,8 +11,6 @@ services:
 python:
   - "2.7"
 
-node_js:
-  - "0.8"
 
 install:
   - pip install robotframework
@@ -40,7 +37,7 @@ before_install:
   #- sudo apt-get install chromium-chromedriver
 
   - cd $HOME
-  - ls -la
+  #- ls -la
   #- cd .local/
   #- ls -la
   #- cd home/travis
@@ -84,5 +81,9 @@ before_script:
   - cd $HOME
   - cd build/kubik335/zkouska
 
-script: pybot tests/newTest.robot
+script: pybot -v BROWSER:$BROWSER tests/newTest.robot
+
+env:
+  matrix:
+  - BROWSER=chrome
 
