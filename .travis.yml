@@ -3,7 +3,7 @@ language:
 
 
 sudo: true
-dist: trusty
+#####dist: trusty
 
 services:
   - mysql
