@@ -12,3 +12,5 @@ Přihlas se
 Vítej zpět
 E-mail nebo uživatelské jméno
 Heslo
+
+Vyplňte prosím toto pole.
